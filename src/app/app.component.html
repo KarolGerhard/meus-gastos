@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<label for="nome">Digite seu nome</label>
+<input id="nome" type="text" [value]= "nome">
+
+<label for="segundo-nome"></label>
+<input id="segundo-nome" type="text" [(ngModel)]="nome2">
+
+<div>
+  Primeiro nome: {{nome}}
+</div>
+<div>
+  Segundo nome: {{nome2}}
+</div>
+<div>
+  <button (click)="exibirAlerta()">Exibir alerta</button>
+</div>
+
+
+<app-formulario-lancamento (aoSalvar)="salvarEvento($event)"></app-formulario-lancamento>
+<app-nome [nomeAExibir]="nome"></app-nome>
+<app-segundo></app-segundo>
+
+<!-- <router-outlet></router-outlet> -->
